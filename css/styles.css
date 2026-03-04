@@ -1,0 +1,675 @@
+@charset "UTF-8";
+
+/* 
+---------------------------------------------
+FONTS & BASE STYLES
+---------------------------------------------
+*/
+body {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.75;
+    color: #6c757d;
+}
+
+/* 
+---------------------------------------------
+NAVBAR - ALWAYS DARK
+---------------------------------------------
+*/
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    width: 100%;
+}
+
+#mainNav .navbar-brand {
+    color: #ffc800;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+}
+
+#mainNav .navbar-brand img {
+    height: 1.5rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 0.0625em;
+    padding: 0.5rem 1rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #1E90FF;
+}
+
+#mainNav .navbar-toggler {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* 
+---------------------------------------------
+MAIN INDEX SECTION
+---------------------------------------------
+*/
+.masthead-new {
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px 0;
+}
+
+/* VIJAY MANN TEXT */
+.display-1 {
+    font-size: 5rem;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    font-weight: 700;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #212529;
+    display: block;
+}
+
+.hero-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+/* Profile image */
+.profile-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 4px;
+    filter: grayscale(100%);
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .profile-img {
+        max-width: 350px;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-img {
+        max-width: 220px;
+        margin: 0 auto 2rem auto;
+    }
+}
+
+/* 
+---------------------------------------------
+BUTTONS
+---------------------------------------------
+*/
+.btn-xl {
+    padding: 1rem 2rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-dark {
+    background-color: #212529;
+    color: #fff;
+    border: 1px solid #212529;
+}
+
+.btn-dark:hover {
+    background-color: #ffc800;
+    border-color: #ffc800;
+    color: #212529;
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    color: #212529;
+    border: 1px solid #212529;
+}
+
+.btn-outline-dark:hover {
+    background-color: #212529;
+    color: #fff;
+}
+
+.btn-social {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 100%;
+    background-color: #212529;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-social:hover {
+    background-color: #ffc800;
+}
+
+/* 
+---------------------------------------------
+PAGE SECTIONS
+---------------------------------------------
+*/
+.page-section {
+    padding: 6rem 0;
+}
+
+.page-section h2.section-heading {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #212529;
+    text-align: center;
+}
+
+.page-section h3.section-subheading {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-bottom: 4rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .page-section {
+        padding: 9rem 0;
+    }
+}
+
+/* 
+---------------------------------------------
+TIMELINE - YOUR ORIGINAL WORKING VERSION
+---------------------------------------------
+*/
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+/* The vertical line */
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 4px;
+    margin-left: -2px;
+    content: "";
+    background-color: #e9ecef;
+}
+
+/* Timeline items */
+.timeline > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px;
+}
+
+.timeline > li:after,
+.timeline > li:before {
+    display: table;
+    content: " ";
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+/* Timeline content panel */
+.timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+/* Timeline circular images */
+.timeline > li .timeline-image {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    background-color: #ffc800;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Images inside circles */
+.timeline > li .timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Timeline headings */
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: #212529;
+}
+
+.timeline .timeline-heading h4.subheading {
+    color: #ffc800;
+    text-transform: none;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Timeline body text */
+.timeline .timeline-body > p {
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+/* Tablet styles - matches your live site */
+@media (min-width: 768px) {
+    .timeline:before {
+        left: 50%;
+    }
+    
+    .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .timeline > li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+    
+    .timeline > li .timeline-image {
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+    }
+    
+    .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+    .timeline > li {
+        min-height: 150px;
+    }
+    
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+    
+    .timeline > li .timeline-image {
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+    
+    .timeline > li .timeline-image h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px;
+    }
+    
+    .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+    .timeline > li {
+        min-height: 170px;
+    }
+    
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+    
+    .timeline > li .timeline-image {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+    
+    .timeline > li .timeline-image h4 {
+        margin-top: 40px;
+    }
+    
+    .timeline > li.timeline-inverted > .timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+/* 
+---------------------------------------------
+FOOTER
+---------------------------------------------
+*/
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+}
+
+.footer a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc800;
+}
+
+/* 
+---------------------------------------------
+BOOTSTRAP UTILITIES (minimal set)
+---------------------------------------------
+*/
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-lg-5, .col-lg-7 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .col-lg-5 {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    
+    .col-lg-7 {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+}
+
+/* Order utilities */
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+@media (min-width: 992px) {
+    .order-lg-1 { order: 1; }
+    .order-lg-2 { order: 2; }
+}
+
+/* Text alignment */
+.text-center { text-align: center; }
+@media (min-width: 992px) {
+    .text-lg-start { text-align: left; }
+    .text-lg-end { text-align: right; }
+}
+
+/* Spacing */
+.d-flex { display: flex; }
+.gap-3 { gap: 1rem; }
+.justify-content-center { justify-content: center; }
+@media (min-width: 992px) {
+    .justify-content-lg-start { justify-content: flex-start; }
+}
+
+.mb-5 { margin-bottom: 3rem; }
+.mb-lg-0 { margin-bottom: 0; }
+.my-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.py-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.ms-auto { margin-left: auto; }
+
+/* Text colors */
+.text-muted { color: #6c757d; }
+.text-uppercase { text-transform: uppercase; }
+
+/* Images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+/* 
+---------------------------------------------
+HTML OFFSET FOR FIXED NAVBAR
+---------------------------------------------
+*/
+html {
+    scroll-padding-top: 76px;
+}
+
+/* 
+---------------------------------------------
+ABOUT & TECH CERTS SECTION SPACING
+---------------------------------------------
+*/
+#about {
+    padding-top: 3rem !important;
+    padding-bottom: 1rem !important;  /* Reduced from 2rem */
+}
+
+#tech-certs {
+    padding-top: 0.5rem !important;   /* Reduced from 1rem */
+    padding-bottom: 4rem !important;
+}
+
+/* Reduce gap between rows in tech-certs */
+#tech-certs .row {
+    margin-bottom: 0 !important;      /* Removes extra row spacing */
+}
+
+#tech-certs .mb-4 {
+    margin-bottom: 1rem !important;   /* Reduced from 1.5rem (default) */
+}
+
+/* Even smaller on mobile */
+@media (max-width: 767px) {
+    #tech-certs .mb-4 {
+        margin-bottom: 0.75rem !important;
+    }
+    
+    #tech-certs .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* 
+---------------------------------------------
+PROJECTS PAGE STYLES
+---------------------------------------------
+*/
+
+/* Web project cards */
+.project-card {
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+}
+
+.project-card .card-img-top {
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+    .project-card .card-img-top {
+        height: 140px;
+    }
+}
+
+.project-card .card-body {
+    padding: 0.75rem 0 0 0;
+}
+
+.project-card h6 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-card .tech-tags {
+    font-size: 0.7rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.project-card .project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.project-card .project-links a,
+.project-card .project-links span {
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+
+/* Film project items */
+.film-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.film-item:last-child {
+    border-bottom: none;
+}
+
+.film-item .film-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 576px) {
+    .film-item .film-details {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+
+.film-item .film-title {
+    font-weight: 600;
+}
+
+.film-item .film-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.film-item .film-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.film-item .film-link.youtube {
+    color: #dc3545;
+}
+
+.film-item .film-link.imdb {
+    color: #f5c518;
+}
+
+.film-item .film-link:hover {
+    text-decoration: underline;
+}
+
+/* View all button */
+.view-all-btn {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/* Full filmography container */
+#full-filmography {
+    margin-top: 1.5rem;
+}
